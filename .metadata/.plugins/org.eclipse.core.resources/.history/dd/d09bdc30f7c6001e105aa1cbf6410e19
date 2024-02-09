@@ -1,0 +1,16 @@
+package kamalnath.basics;
+
+import io.restassured.path.json.JsonPath;
+import kamalnath.files.Payload;
+import kamalnath.files.ReusableMethod;
+
+public class ComplexJavaParse {
+	public static void main(String []args) {
+		JsonPath js= ReusableMethod.rawToJSON(Payload.coursePrice()); 
+		JsonPath js1 = new JsonPath(Payload.coursePrice());
+		// Print No of courses returned by API
+		int count= js.getInt("course.size()");
+		System.out.println(count);
+		
+	}
+}

@@ -1,0 +1,10 @@
+package kamalnath.basics;
+
+public class SumValidation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

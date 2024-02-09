@@ -1,0 +1,32 @@
+package kamalnath.basics;
+
+import static io.restassured.RestAssured.given;
+
+import io.restassured.RestAssured;
+import kamalnath.files.Payload;
+
+import static org.hamcrest.Matchers.*;
+
+public class BasicsOfAPIAutomation2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub
+				//Validate POST API
+				//given -- all input details, 
+				//when -- submit the API, 
+				//then -- Validate the reponses
+				
+				//given method
+				RestAssured.baseURI = "https://rahulshettyacademy.com";
+				given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
+				.body(Payload.AddPlace()).when().post("/maps/api/place/add/json")
+				.then().log().all().assertThat().statusCode(200)
+				.body("scope", equalTo("APP"))
+				.header("Server", "Apache/2.4.52 (Ubuntu)");
+				
+				//ADD PLACE --> UPDATE PLACE WITH NEW ADDRESS --> Get place to validate if new address is present in the response.
+
+	}
+
+}

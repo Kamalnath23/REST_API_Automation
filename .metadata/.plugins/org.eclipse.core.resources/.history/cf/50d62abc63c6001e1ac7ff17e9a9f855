@@ -1,0 +1,9 @@
+package kamalnath.files;
+
+public class Payload {
+	//made static bcos can be called this class without creating object. can be called by classname.methodname
+	//else need to create object and call using it.
+	public static String AddPlace() {
+		return "";
+	}
+}
