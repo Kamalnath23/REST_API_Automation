@@ -1,17 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-09T09:11:20 IST" name="Default suite" finished-at="2024-02-09T09:11:22 IST" duration-ms="1803">
+  <suite started-at="2024-02-10T15:52:42 IST" name="Default suite" finished-at="2024-02-10T15:52:45 IST" duration-ms="3151">
     <groups>
     </groups>
-    <test started-at="2024-02-09T09:11:20 IST" name="Default test" finished-at="2024-02-09T09:11:22 IST" duration-ms="1803">
-      <class name="kamalnath.basics.SumValidation">
-        <test-method signature="sumOfCourse()[pri:0, instance:kamalnath.basics.SumValidation@5ccddd20]" started-at="2024-02-09T09:11:20 IST" name="sumOfCourse" finished-at="2024-02-09T09:11:22 IST" duration-ms="1751" status="PASS">
+    <test started-at="2024-02-10T15:52:42 IST" name="Default test" finished-at="2024-02-10T15:52:45 IST" duration-ms="3151">
+      <class name="kamalnath.files.DynamicJSON">
+        <test-method signature="addBook(java.lang.String,java.lang.String)[pri:0, instance:kamalnath.files.DynamicJSON@65466a6a]" started-at="2024-02-10T15:52:42 IST" name="addBook" data-provider="BooksData" finished-at="2024-02-10T15:52:45 IST" duration-ms="2793" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ofjjw]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[134]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sumOfCourse -->
-      </class> <!-- kamalnath.basics.SumValidation -->
+        </test-method> <!-- addBook -->
+        <test-method signature="addBook(java.lang.String,java.lang.String)[pri:0, instance:kamalnath.files.DynamicJSON@65466a6a]" started-at="2024-02-10T15:52:45 IST" name="addBook" data-provider="BooksData" finished-at="2024-02-10T15:52:45 IST" duration-ms="151" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[xzc]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8765]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+        <test-method signature="addBook(java.lang.String,java.lang.String)[pri:0, instance:kamalnath.files.DynamicJSON@65466a6a]" started-at="2024-02-10T15:52:45 IST" name="addBook" data-provider="BooksData" finished-at="2024-02-10T15:52:45 IST" duration-ms="147" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[oplk]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2341]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+      </class> <!-- kamalnath.files.DynamicJSON -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

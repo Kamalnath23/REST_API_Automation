@@ -1,5 +1,7 @@
 package kamalnath.files;
 
+import org.testng.annotations.DataProvider;
+
 public class Payload {
 	//made static bcos can be called this class without creating object. can be called by classname.methodname
 	//else need to create object and call using it.
@@ -70,4 +72,18 @@ public class Payload {
 				+ "\r\n"
 				+ "}";
 	}
+	
+	public static String AddBook(String ISBN, String Aisle) {
+		String payload= "{\r\n"
+				+ "\r\n"
+				+ "\"name\":\"Cypress4\",\r\n"
+				+ "\"isbn\":\""+ISBN+"\",\r\n"
+				+ "\"aisle\":\""+Aisle+"\",\r\n"
+				+ "\"author\":\"Kamal\"\r\n"
+				+ "}\r\n"
+				+ "";
+		return payload;
+	}
+	
+	
 }
