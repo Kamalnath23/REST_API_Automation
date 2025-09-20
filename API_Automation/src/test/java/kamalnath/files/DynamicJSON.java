@@ -28,7 +28,7 @@ public class DynamicJSON {
 	@DataProvider(name="BooksData")
 	public Object[][] getData() {
 		return new Object[][] {
-			{"ofjjw", "134"}, {"xzc","8765"}, {"oplk","2341"}
+			{"ofjjw", "134"}, {"xzc","8765"}, {"oplk","2341"}, {"Cypress JS", "777"}
 		};
 	}
 }

@@ -1,0 +1,12 @@
+package kamalnath.basics;
+
+import io.restassured.RestAssured;
+
+public class JIRA_API_Integration_Bug_Creation {
+
+	public static void main(String[] args) {
+		RestAssured.baseURI = "https://kamalnath121998.atlassian.net";
+
+	}
+
+}

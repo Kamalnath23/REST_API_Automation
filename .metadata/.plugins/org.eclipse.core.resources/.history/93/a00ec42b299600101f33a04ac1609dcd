@@ -1,0 +1,32 @@
+package kamalnath.basics;
+
+import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
+import kamalnath.files.Payload;
+
+import static io.restassured.RestAssured.*;
+
+public class JIRA_API_Integration_Bug_Creation {
+
+	public static void main(String[] args) {
+		RestAssured.baseURI = "https://kamalnath121998.atlassian.net/";
+		String createIssueResponse =  given().log().all().headers("Content-Type","application/json",
+				"Authorization", "Basic a2FtYWxuYXRoMTIxOTk4QGdtYWlsLmNvbTpBVEFUVDN4RmZHRjBacmtlTi00THZYNTlaQlNNNm1LeVpZZDdkaGlDUGVsY0dqYnd6M25STUtMNWhBVVp5aEFULXg3LXZrbTY4WFotSktkZVJjMndHa1NPTVJCSzdUd3hJVkxmUnFFSkx4RjNIYjQ0RF9FYzF5U2dMandyLWxrQTlYLUVpOWJCb3JxTExKTFZCWGY3XzhiTXZNNDlNR3lKUjlGTHpMYWtyNzYzNDN1dko3Ulo4ZUk9OUJBNEUyRjU=")
+		.body(Payload.CreateBug()).log().all()
+		.when().post("rest/api/2/issue")
+		.then().assertThat().statusCode(201)
+		.extract().response().asString();
+		
+		JsonPath js = new JsonPath(createIssueResponse); //for parsing json
+		String id = js.getString("id");
+		System.out.println(id);
+		
+		//Add attachments
+		given().log().all()
+		.headers("X-Atlassian-Token","no-check",
+				"Authorization", "Basic a2FtYWxuYXRoMTIxOTk4QGdtYWlsLmNvbTpBVEFUVDN4RmZHRjBacmtlTi00THZYNTlaQlNNNm1LeVpZZDdkaGlDUGVsY0dqYnd6M25STUtMNWhBVVp5aEFULXg3LXZrbTY4WFotSktkZVJjMndHa1NPTVJCSzdUd3hJVkxmUnFFSkx4RjNIYjQ0RF9FYzF5U2dMandyLWxrQTlYLUVpOWJCb3JxTExKTFZCWGY3XzhiTXZNNDlNR3lKUjlGTHpMYWtyNzYzNDN1dko3Ulo4ZUk9OUJBNEUyRjU=")
+		.multiPart("file", new File("w/j"));
+
+	}
+
+}

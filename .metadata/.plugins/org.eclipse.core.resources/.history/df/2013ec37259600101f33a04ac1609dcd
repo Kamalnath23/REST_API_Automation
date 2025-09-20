@@ -1,0 +1,10 @@
+package kamalnath.basics;
+
+public class JIRA_API_Integration_Bug_Creation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

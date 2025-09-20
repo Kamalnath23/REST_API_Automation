@@ -14,6 +14,7 @@ public class BasicsOfAPIAutomation1 {
 		
 		//given method
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
+		//given().queryParam(DEFAULT_BODY_ROOT_PATH, null)
 		given().log().all().queryParam("key", "qaclick123").header("Content-Type","application/json")
 		.body("{\r\n"
 				+ "  \"location\": {\r\n"
@@ -34,7 +35,7 @@ public class BasicsOfAPIAutomation1 {
 				+ "").when().post("/maps/api/place/add/json")
 		.then().log().all().assertThat().statusCode(200);
 		
-		
+		// int num[] = new int[5];
 		
 	}
 

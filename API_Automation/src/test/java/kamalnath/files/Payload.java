@@ -85,5 +85,22 @@ public class Payload {
 		return payload;
 	}
 	
+	public static String CreateBug() {
+		return "{\r\n"
+				+ "    \"fields\": {\r\n"
+				+ "       \"project\":\r\n"
+				+ "       {\r\n"
+				+ "          \"key\": \"SCRUM\"\r\n"
+				+ "       },\r\n"
+				+ "       \"summary\": \"Link are not workiing.\",\r\n"
+				+ "       \"description\": \"Automatuion bug: Creating of an issue using project keys and issue type names using the REST API\",\r\n"
+				+ "       \"issuetype\": {\r\n"
+				+ "          \"name\": \"Bug\"\r\n"
+				+ "       }\r\n"
+				+ "   }\r\n"
+				+ "}\r\n"
+				+ "";
+	}
+	
 	
 }

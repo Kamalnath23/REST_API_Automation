@@ -2,8 +2,14 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="org.testng.Assert"/>
     <fullyQualifiedTypeName name="io.restassured.RestAssured"/>
-    <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
     <fullyQualifiedTypeName name="kamalnath.files.Payload"/>
     <fullyQualifiedTypeName name="kamalnath.files.ReusableMethod"/>
     <fullyQualifiedTypeName name="io.restassured.path.json.JsonPath"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.DataProvider"/>
+    <fullyQualifiedTypeName name="java.nio.file.Files"/>
+    <fullyQualifiedTypeName name="java.nio.file.Paths"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.beust.jcommander.Parameter"/>
+    <fullyQualifiedTypeName name="com.beust.jcommander.Parameters"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
 </qualifiedTypeNameHistroy>

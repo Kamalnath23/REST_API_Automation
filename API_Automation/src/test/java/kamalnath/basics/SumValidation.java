@@ -1,8 +1,10 @@
 package kamalnath.basics;
 
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.beust.jcommander.Parameter;
 import io.restassured.path.json.JsonPath;
 import kamalnath.files.Payload;
 import kamalnath.files.ReusableMethod;
@@ -29,6 +31,12 @@ public class SumValidation {
 			int resultantAmountInDashboard= js.getInt("dashboard.purchaseAmount");
 			Assert.assertEquals(resultantAmountInDashboard, sum);
 		}
+		
+//		@Parameters({"RowNu"})
+//		@Test
+//		public void initiatedata(String row) {
+//			int lat = (row, col);
+//		}
 	
 
 }
