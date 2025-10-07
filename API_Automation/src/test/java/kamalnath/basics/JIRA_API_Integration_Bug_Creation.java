@@ -24,7 +24,7 @@ public class JIRA_API_Integration_Bug_Creation {
 		System.out.println(id);
 		
 		//Add attachments
-		given().log().all()
+		String AddAtachment = given().log().all()
 		.headers("X-Atlassian-Token","no-check",
 				"Authorization", "Basic a2FtYWxuYXRoMTIxOTk4QGdtYWlsLmNvbTpBVEFUVDN4RmZHRjBacmtlTi00THZYNTlaQlNNNm1LeVpZZDdkaGlDUGVsY0dqYnd6M25STUtMNWhBVVp5aEFULXg3LXZrbTY4WFotSktkZVJjMndHa1NPTVJCSzdUd3hJVkxmUnFFSkx4RjNIYjQ0RF9FYzF5U2dMandyLWxrQTlYLUVpOWJCb3JxTExKTFZCWGY3XzhiTXZNNDlNR3lKUjlGTHpMYWtyNzYzNDN1dko3Ulo4ZUk9OUJBNEUyRjU=")
 		.pathParam("key", id)
@@ -34,9 +34,21 @@ public class JIRA_API_Integration_Bug_Creation {
 		.assertThat().statusCode(200)
 		.extract().response().asString();
 		
-		JsonPath js2 = new JsonPath(createIssueResponse); //for parsing json
+		JsonPath js2 = new JsonPath(AddAtachment); //for parsing json
 		String fileName = js2.getString("filename");
 		System.out.println(fileName);
+		
+		//GET ISSUE DETAILS:
+		String GetIssueDetails = given().log().all().headers("Accept-Type","application/json",
+				"Authorization", "Basic a2FtYWxuYXRoMTIxOTk4QGdtYWlsLmNvbTpBVEFUVDN4RmZHRjBacmtlTi00THZYNTlaQlNNNm1LeVpZZDdkaGlDUGVsY0dqYnd6M25STUtMNWhBVVp5aEFULXg3LXZrbTY4WFotSktkZVJjMndHa1NPTVJCSzdUd3hJVkxmUnFFSkx4RjNIYjQ0RF9FYzF5U2dMandyLWxrQTlYLUVpOWJCb3JxTExKTFZCWGY3XzhiTXZNNDlNR3lKUjlGTHpMYWtyNzYzNDN1dko3Ulo4ZUk9OUJBNEUyRjU=")
+		.pathParam("Key", id)
+		.when().get("rest/api/2/issue/{Key}")
+		.then().log().all().assertThat().statusCode(200)
+		.extract().response().asString();
+		
+		JsonPath js3 = new JsonPath(GetIssueDetails); //for parsing json
+		String description = js3.getString("fields.description");
+		System.out.println(description);
 
 	}
 

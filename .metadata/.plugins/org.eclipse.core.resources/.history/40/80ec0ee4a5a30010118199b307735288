@@ -1,0 +1,20 @@
+package kamalnath.basics;
+
+import static io.restassured.RestAssured.given;
+
+import io.restassured.RestAssured;
+
+public class OAuthEndToEndAutomation {
+	public static void main (String args[]) {
+		//Step 1 : Authorization Call and get access token
+		RestAssured.baseURI="https://rahulshettyacademy.com";
+		 given().log().all()
+		 .formParams("client_id", "692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com",
+				 "client_secret","",
+				 "","",
+				 "","")
+		 .when().post("/oauthapi/oauth2/resourceOwner/token")
+
+	}
+
+}

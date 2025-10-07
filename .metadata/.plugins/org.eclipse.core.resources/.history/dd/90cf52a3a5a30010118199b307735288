@@ -1,0 +1,13 @@
+package kamalnath.basics;
+
+import io.restassured.RestAssured;
+
+public class OAuthEndToEndAutomation {
+	public static void main (String args[]) {
+		//Step 1 : Authorization Call and get access token
+		RestAssured.baseURI="https://rahulshettyacademy.com/oauthapi/oauth2/resourceOwner/token";
+		given().lo
+
+	}
+
+}

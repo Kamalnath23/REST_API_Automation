@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="org.testng.Assert"/>
-    <fullyQualifiedTypeName name="io.restassured.RestAssured"/>
-    <fullyQualifiedTypeName name="kamalnath.files.Payload"/>
     <fullyQualifiedTypeName name="kamalnath.files.ReusableMethod"/>
     <fullyQualifiedTypeName name="io.restassured.path.json.JsonPath"/>
     <fullyQualifiedTypeName name="org.testng.annotations.DataProvider"/>
@@ -12,4 +10,7 @@
     <fullyQualifiedTypeName name="com.beust.jcommander.Parameter"/>
     <fullyQualifiedTypeName name="com.beust.jcommander.Parameters"/>
     <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+    <fullyQualifiedTypeName name="io.restassured.RestAssured"/>
+    <fullyQualifiedTypeName name="kamalnath.files.Payload"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
 </qualifiedTypeNameHistroy>
