@@ -1,9 +1,0 @@
-package kamalnath.basics;
-
-public class OAuthEndToEndAutomation {
-	public static void main (String args[]) {
-		
-
-	}
-
-}

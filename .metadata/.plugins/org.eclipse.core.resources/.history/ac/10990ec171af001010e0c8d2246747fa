@@ -1,0 +1,22 @@
+package kamalnath.SerialisationTest;
+
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+
+public class SerialisationTest {
+
+	public static void main(String[] args) {
+		AddPlace P1 = new AddPlace();
+		
+		
+		// TODO Auto-generated method stub
+		RestAssured.baseURI="https://rahulshettyacademy.com";
+		String response = given().queryParam("key","qaclick123")
+		.body(GoogleMapPayload.GoogleMapsAddPlacePayload())
+		.when().post("/maps/api/place/add/json")
+		.then().assertThat().statusCode(200).extract().response().asString();
+		
+
+	}
+
+}
