@@ -19,4 +19,6 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="org.testng.Assert"/>
+    <fullyQualifiedTypeName name="io.restassured.builder.RequestSpecBuilder"/>
+    <fullyQualifiedTypeName name="io.restassured.http.ContentType"/>
 </qualifiedTypeNameHistroy>
