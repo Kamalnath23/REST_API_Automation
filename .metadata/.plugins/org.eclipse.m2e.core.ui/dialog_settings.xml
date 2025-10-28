@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\API Postman Testing\Codes\PostmanWorkSpace1\API_Automation\src\test\java\kamalnath\SerialisationTest\RequestSpecBuilderTest.java"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -25,10 +26,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="Kamal_And_RSA.EcommerceApp"/>
 		</list>
 		<list key="groupId">
+			<item value="Kamal_And_RSA"/>
 		</list>
 		<list key="artifactId">
+			<item value="EcommerceApp"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -44,12 +48,10 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="API_Automation"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="API_Automation"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
